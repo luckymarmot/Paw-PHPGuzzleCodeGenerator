@@ -57,7 +57,7 @@ PHPGuzzleCodeGenerator = ->
             }
 
         multipart_body = request.multipartBody
-        if multipart_body 
+        if multipart_body
             return {
                 "has_body":true
                 "has_multipart_body":true
@@ -83,13 +83,13 @@ PHPGuzzleCodeGenerator = ->
 
     @json_body_object = (object, indent = 0) ->
         if object == null
-            s = "None"
+            s = "null"
         else if typeof(object) == 'string'
             s = "\"#{addslashes object}\""
         else if typeof(object) == 'number'
             s = "#{object}"
         else if typeof(object) == 'boolean'
-            s = "#{if object then "True" else "False"}"
+            s = "#{if object then "true" else "false"}"
         else if typeof(object) == 'object'
             indent_str = Array(indent + 1).join('    ')
             indent_str_children = Array(indent + 2).join('    ')
@@ -98,9 +98,9 @@ PHPGuzzleCodeGenerator = ->
                     ("#{indent_str_children}#{@json_body_object(value, indent+1)}" for value in object).join(',\n') +
                     "\n#{indent_str}]"
             else
-                s = "{\n" +
-                    ("#{indent_str_children}\"#{addslashes key}\": #{@json_body_object(value, indent+1)}" for key, value of object).join(',\n') +
-                    "\n#{indent_str}}"
+                s = "[\n" +
+                    ("#{indent_str_children}\"#{addslashes key}\" => #{@json_body_object(value, indent+1)}" for key, value of object).join(',\n') +
+                    "\n#{indent_str}]"
 
         return s
 
