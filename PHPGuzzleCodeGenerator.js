@@ -141,7 +141,7 @@
         indent_str = Array(indent + 1).join('    ');
         indent_str_children = Array(indent + 2).join('    ');
         if (object.length != null) {
-          s = "array(\n" + ((function() {
+          s = "[\n" + ((function() {
             var _i, _len, _results;
             _results = [];
             for (_i = 0, _len = object.length; _i < _len; _i++) {
@@ -149,9 +149,9 @@
               _results.push("" + indent_str_children + (this.json_body_object(value, indent + 1)));
             }
             return _results;
-          }).call(this)).join(',\n') + ("\n" + indent_str + ")");
+          }).call(this)).join(',\n') + ("\n" + indent_str + "]");
         } else {
-          s = "array(\n" + ((function() {
+          s = "[\n" + ((function() {
             var _results;
             _results = [];
             for (key in object) {
@@ -159,7 +159,7 @@
               _results.push("" + indent_str_children + "\"" + (addslashes(key)) + "\" => " + (this.json_body_object(value, indent + 1)));
             }
             return _results;
-          }).call(this)).join(',\n') + ("\n" + indent_str + ")");
+          }).call(this)).join(',\n') + ("\n" + indent_str + "]");
         }
       }
       return s;

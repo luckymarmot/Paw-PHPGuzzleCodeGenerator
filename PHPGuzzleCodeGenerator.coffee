@@ -94,13 +94,13 @@ PHPGuzzleCodeGenerator = ->
             indent_str = Array(indent + 1).join('    ')
             indent_str_children = Array(indent + 2).join('    ')
             if object.length?
-                s = "array(\n" +
+                s = "[\n" +
                     ("#{indent_str_children}#{@json_body_object(value, indent+1)}" for value in object).join(',\n') +
-                    "\n#{indent_str})"
+                    "\n#{indent_str}]"
             else
-                s = "array(\n" +
+                s = "[\n" +
                     ("#{indent_str_children}\"#{addslashes key}\" => #{@json_body_object(value, indent+1)}" for key, value of object).join(',\n') +
-                    "\n#{indent_str})"
+                    "\n#{indent_str}]"
 
         return s
 
