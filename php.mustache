@@ -64,7 +64,8 @@ function send_request() {
         ]);
         {{/body.has_multipart_body}}
         {{#body.has_json_body}}
-        $request->setBody(GuzzleHttp\Stream\Stream::factory('{{{body.json_body_object}}}'));
+        $body = {{{body.json_body_object}}};
+        $request->setBody(GuzzleHttp\Stream\Stream::factory(json_encode($body)));
         {{/body.has_json_body}}
         
         $response = $client->send($request);
