@@ -12,7 +12,7 @@ Copyright © 2014 Paw Inc.
 
 ##Contributors
 
-Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/LuckyMarmot/Paw-cURLCodeGenerator/graphs/contributors).
+Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/LuckyMarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
 
 ##Credits
 
