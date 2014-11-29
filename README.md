@@ -8,9 +8,11 @@ This a Paw Extension that generates code for PHP using the [Guzzle](http://guzzl
 
 This Paw Extension is released under the [MIT License](LICENSE). Feel free to fork, and modify!
 
-Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Authors](AUTHORS.md).
-
 Copyright © 2014 Paw Inc.
+
+##Contributors
+
+Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/LuckyMarmot/Paw-cURLCodeGenerator/graphs/contributors).
 
 ##Credits
 
