@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/LuckyMarmot/Paw-PHPGuzzleCodeGenerator.svg?branch=master)](https://travis-ci.org/LuckyMarmot/Paw-PHPGuzzleCodeGenerator)
+
 #PHP + Guzzle Code Generator (Paw Extension)
 
 This a Paw Extension that generates code for PHP using the [Guzzle](http://guzzle.readthedocs.org/en/latest/) library.
@@ -13,3 +15,4 @@ Copyright © 2014 Paw Inc.
 ##Credits
 
 * [Mustache.js](https://github.com/janl/mustache.js/), also released under the MIT License
+* [URI.js](http://medialize.github.io/URI.js/), also released under the MIT License
