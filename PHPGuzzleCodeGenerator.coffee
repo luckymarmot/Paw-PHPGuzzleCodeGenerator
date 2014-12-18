@@ -125,5 +125,6 @@ PHPGuzzleCodeGenerator.identifier =
 PHPGuzzleCodeGenerator.title =
     "PHP (Guzzle)"
 PHPGuzzleCodeGenerator.fileExtension = "php"
+PHPGuzzleCodeGenerator.languageHighlighter = "php"
 
 registerCodeGenerator PHPGuzzleCodeGenerator
