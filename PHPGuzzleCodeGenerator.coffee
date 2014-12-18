@@ -121,8 +121,9 @@ PHPGuzzleCodeGenerator = ->
 
 
 PHPGuzzleCodeGenerator.identifier =
-    "com.luckymarmot.PawExtensions.PHPGuzzleCodeGenerator";
+    "com.luckymarmot.PawExtensions.PHPGuzzleCodeGenerator"
 PHPGuzzleCodeGenerator.title =
-    "PHP (Guzzle)";
+    "PHP (Guzzle)"
+PHPGuzzleCodeGenerator.fileExtension = "php"
 
 registerCodeGenerator PHPGuzzleCodeGenerator
