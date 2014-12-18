@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/LuckyMarmot/Paw-PHPGuzzleCodeGenerator.svg?branch=master)](https://travis-ci.org/LuckyMarmot/Paw-PHPGuzzleCodeGenerator)
+[![Build Status](https://travis-ci.org/luckymarmot/Paw-PHPGuzzleCodeGenerator.svg?branch=master)](https://travis-ci.org/luckymarmot/Paw-PHPGuzzleCodeGenerator)
 
 #PHP + Guzzle Code Generator (Paw Extension)
 
@@ -12,7 +12,7 @@ Copyright © 2014 Paw Inc.
 
 ##Contributors
 
-Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/LuckyMarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
+Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/luckymarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
 
 ##Credits
 
