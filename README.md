@@ -2,13 +2,29 @@
 
 # PHP + Guzzle Code Generator (Paw Extension)
 
-This a Paw Extension that generates code for PHP using the [Guzzle](http://guzzle.readthedocs.org/en/latest/) library.
+A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates PHP code for the [Guzzle](http://guzzle.readthedocs.org/en/latest/) library.
 
 ## Installation
 
-* `npm install`
-* `cake build`
-* `cake install`
+Easily install this Paw Extension: [Install PHP + Guzzle Code Generator](http://luckymarmot.com/paw/extensions/PHPGuzzleCodeGenerator)
+
+## Development
+
+### Build & Install
+
+```shell
+npm install
+cake build
+cake install
+```
+
+### Watch
+
+During development, watch for changes:
+
+```shell
+cake watch
+```
 
 ## License
 
