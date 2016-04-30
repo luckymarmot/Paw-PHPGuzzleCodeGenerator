@@ -2,7 +2,7 @@
 
 # PHP + Guzzle Code Generator (Paw Extension)
 
-A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates PHP code for the [Guzzle](http://guzzle.readthedocs.org/en/latest/) library.
+A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates PHP code for the [Guzzle](https://guzzle3.readthedocs.io) 3.x library.
 
 ## Installation
 
