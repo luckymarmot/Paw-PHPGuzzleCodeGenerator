@@ -130,7 +130,7 @@ PHPGuzzleCodeGenerator = ->
 PHPGuzzleCodeGenerator.identifier =
     "com.luckymarmot.PawExtensions.PHPGuzzleCodeGenerator"
 PHPGuzzleCodeGenerator.title =
-    "PHP (Guzzle)"
+    "PHP (Guzzle 3.x)"
 PHPGuzzleCodeGenerator.fileExtension = "php"
 PHPGuzzleCodeGenerator.languageHighlighter = "php"
 
