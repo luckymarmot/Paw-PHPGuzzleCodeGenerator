@@ -5,15 +5,18 @@ import {
 @registerCodeGenerator
 export default class Generator {
     // TODO update static information with correct ones
-    static identifier = 'com.luckymarmot.PawExtensions.MySuperGenerator'
-    static title = 'My Super Generator'
+    // Organisation
     static organisation = 'luckymarmot'
     static repository = 'Paw-ES7-Generator-Template'
-    static help =
-        'https://github.com/' + organisation + '/' + repository
+
+    // Generator
+    static identifier = 'com.luckymarmot.PawExtensions.MySuperGenerator'
+    static title = 'My Super Generator'
 
     static languageHighlighter= 'json'
     static fileExtension = 'har'
+
+    static help = 'https://github.com/' + organisation + '/' + repository
 
     // args: context, requests, options
     generate() {
