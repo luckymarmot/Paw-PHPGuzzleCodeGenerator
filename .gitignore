@@ -1,6 +1,6 @@
 # Build
 dist/
-release/
+releases/
 node_modules/
 lib/
 .DS_Store
