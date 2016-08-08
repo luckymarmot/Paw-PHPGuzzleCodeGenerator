@@ -1,5 +1,4 @@
 {
-  "name": "Paw-HARGenerator",
   "version": "0.1.0",
   "dependencies": {
     "babel-plugin-transform-flow-strip-types": "6.3.15",
@@ -29,9 +28,5 @@
     "json-loader": "^0.5.4",
     "mocha": "2.3.4",
     "webpack": "1.12.9"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:luckymarmot/Paw-HARGenerator.git"
   }
 }
