@@ -1,0 +1,6 @@
+# Build
+dist/
+release/
+node_modules/
+lib/
+.DS_Store
