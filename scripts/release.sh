@@ -1,13 +1,14 @@
 #!/usr/bin/env sh
 base=$1
-mkdir -p "$base/release";
+version=$2
+mkdir -p "$base/releases";
 cd "$base/dist/";
 files=./*
 for file in $files
 do
     echo "working on folder -> $file"
-    package=$(ls "./$file" | sed s/.js$/.zip/);
+    package=$(ls "./$file" | sed "s/.js$/$version.zip/");
     zip -r "$package" "$file/";
-    mv "$package" "$base/release/"
+    mv "$package" "$base/releases/"
 done;
 cd $base;

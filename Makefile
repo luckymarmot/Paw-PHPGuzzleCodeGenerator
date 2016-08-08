@@ -19,7 +19,7 @@ build:
 	sh "$(SCRIPTS)/build.sh" $(BASE)
 
 release:
-	sh "$(SCRIPTS)/release.sh" $(BASE)
+	sh "$(SCRIPTS)/release.sh" $(BASE) $(VERSION)
 
 deploy: install build release
 

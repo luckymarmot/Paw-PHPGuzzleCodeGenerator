@@ -4,11 +4,13 @@ import {
 
 @registerCodeGenerator
 export default class Generator {
-    static identifier =
-        'com.luckymarmot.PawExtensions.HARGenerator'
-    static title = 'HAR Generator'
+    // TODO update static information with correct ones
+    static identifier = 'com.luckymarmot.PawExtensions.MySuperGenerator'
+    static title = 'My Super Generator'
+    static organisation = 'luckymarmot'
+    static repository = 'Paw-ES7-Generator-Template'
     static help =
-        'https://github.com/luckymarmot/Paw-HARGenerator'
+        'https://github.com/' + organisation + '/' + repository
 
     static languageHighlighter= 'json'
     static fileExtension = 'har'
@@ -16,7 +18,6 @@ export default class Generator {
     // args: context, requests, options
     generate() {
         // TODO implement generate
-        // console.log(requests.length, JSON.stringify(requests))
         return false
     }
 }
