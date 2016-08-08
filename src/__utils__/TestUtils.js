@@ -2,7 +2,6 @@ import { describe, it, before, after, beforeEach, afterEach } from 'mocha'
 import { assert } from 'chai'
 import Immutable from 'immutable'
 
-
 class UnitTest {
     /**
      *  Override setUpClass
@@ -30,12 +29,12 @@ class UnitTest {
     tearDown() {}
 
 
-    _getTests() {
+    _getTests(test = 'test') {
         const prototype = Object.getPrototypeOf(this)
         let tests = {}
 
         for (let fname of Object.getOwnPropertyNames(prototype)) {
-            if (fname.startsWith('test')) {
+            if (fname.startsWith(test)) {
                 const newFnName = this._parseFnName(fname)
 
                 tests[newFnName] = ::Object.getPrototypeOf(this)[fname]
@@ -46,18 +45,7 @@ class UnitTest {
     }
 
     _getSkippedTests() {
-        const prototype = Object.getPrototypeOf(this)
-        let tests = {}
-
-        for (let fname of Object.getOwnPropertyNames(prototype)) {
-            if (fname.startsWith('_test')) {
-                const newFnName = this._parseSkippedFnName(fname)
-
-                tests[newFnName] = ::Object.getPrototypeOf(this)[fname]
-            }
-        }
-
-        return tests
+        return this._getTests('_tests')
     }
 
     _parseFnName(name) {
@@ -136,7 +124,7 @@ function registerTest(Class) {
         }
     }
 
-    describe(Class.name.replace(/Test$/, ''), () => {
+    describe(Class.name.replace(/^Test/, ''), () => {
         before(test.setUpClass.bind(test))
         after(test.tearDownClass.bind(test))
         beforeEach(test.setUp.bind(test))
@@ -144,7 +132,8 @@ function registerTest(Class) {
 
         for (let fname of Object.keys(tests)) {
             if (typeof tests[fname] === 'function') {
-                it(fname, tests[fname].bind(test))
+                let name = tests[fname].__desc || fname
+                it(name, tests[fname].bind(test))
             }
             else {
                 describe.skip(fname, skip(tests[fname]))
@@ -152,7 +141,7 @@ function registerTest(Class) {
         }
     })
 
-    describe.skip(Class.name.replace(/Test$/, ''), () => {
+    describe.skip(Class.name.replace(/^Test/, ''), () => {
         for (let fname of Object.keys(skipped)) {
             if (typeof skipped[fname] === 'function') {
                 it(fname, skipped[fname].bind(test))
@@ -199,7 +188,7 @@ function against(Against, ignores = [ 'constructor' ]) {
             }
 
             let superfluousTests = []
-            for (let target of Object.keys(Class.__targets || [])) {
+            for (let target of Object.keys(Class.__targets || {})) {
                 if (names.indexOf(target) < 0) {
                     superfluousTests.push(Class.__targets[target])
                 }
@@ -215,34 +204,11 @@ function against(Against, ignores = [ 'constructor' ]) {
     }
 }
 
-class MockedFunction {
-    constructor() {
-        this.calls = []
-        this.returnValue = null
+function desc(description) {
+    return function(target, key, descriptor) {
+        descriptor.value.__desc = description
+        return descriptor
     }
-
-    setReturnValue(value) {
-        this.returnValue = value
-    }
-
-    func() {
-        this.calls.push(arguments)
-        return this.returnValue
-    }
-
-    getCallBack = ()=> {
-        return ::this.func
-    };
 }
 
-function mockFunction(target, key, descriptor) {
-    const fn = descriptor.value
-    descriptor.value = function() {
-        const mockedFunction = new MockedFunction()
-        return fn.apply(this,
-          Immutable.List(arguments).push(mockedFunction).toJS())
-    }
-    return descriptor
-}
-
-export { UnitTest, registerTest, targets, against, mockFunction }
+export { UnitTest, registerTest, targets, against, desc }
