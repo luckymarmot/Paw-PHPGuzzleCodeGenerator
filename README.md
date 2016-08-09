@@ -19,7 +19,7 @@ The build will be located in the `dist` folder
 
 ### Creating a release
 ```
-make deploy VERSION="@2.3.1"
+make pack VERSION="@2.3.1"
 ```
 
 The `VERSION` variable is optional.
@@ -28,14 +28,7 @@ The release is only local.
 
 ### How to test locally
 ```
-make paw-fast
-```
-
-or
-```
-make paw-extension
+make install
 ```
 
 The extension will be compiled into a build and immediately copied to the Extension folder in Paw.
-
-**note:** `paw-extension` is basically `paw-fast` with a `make install` before.
