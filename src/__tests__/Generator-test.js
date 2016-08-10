@@ -37,6 +37,12 @@ export class TestGenerator extends UnitTest {
         this.assertTrue(false)
     }
 
+    @targets('_extractRequests')
+    _testExtractRequests() {}
+
+    @targets('_extractRequest')
+    _testExtractRequest() {}
+
     __init() {
         const gen = new ClassMock(new Generator())
         return gen

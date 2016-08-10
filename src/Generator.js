@@ -18,13 +18,14 @@ export default class Generator {
     static languageHighlighter= 'php'
     static fileExtension = 'php'
 
-    static help = 'https://github.com/' + organisation + '/' + repository
+    static help = 'https://github.com/luckymarmot/Paw-PHPGuzzleCodeGenerator'
 
     constructor() {
         this.template = new Template()
     }
 
     // args: context, requests, options
+    /* eslint-disable no-unused-vars */
     generate(context, requests, options) {
         // TODO implement generate
         this.padding = ' '.repeat(4)
@@ -37,6 +38,7 @@ export default class Generator {
 
         return this.template.render(model)
     }
+    /* eslint-enable no-unused-vars */
 
     _extractRequests(requests) {
         let result = []
