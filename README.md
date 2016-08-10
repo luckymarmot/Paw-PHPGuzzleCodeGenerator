@@ -2,7 +2,7 @@
 
 # PHP + Guzzle Code Generator (Paw Extension)
 
-A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates PHP code for the [Guzzle](https://guzzle3.readthedocs.io) 3.x library.
+A [Paw Extension](http://luckymarmot.com/paw/extensions/) that generates PHP code for the [Guzzle](http://docs.guzzlephp.org/en/latest/quickstart.html) 6.x library.
 
 ## Installation
 
@@ -34,9 +34,11 @@ Copyright © 2014 Paw Inc.
 
 ## Contributors
 
-Created by Quentin Rousseau ([@kwent](https://github.com/kwent)). See [Contributors](https://github.com/luckymarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
+Created by Quentin Rousseau ([@kwent](https://github.com/kwent)).
+Maintained and updated by Jonathan Montane ([@JonathanMontane](https://github.com/kwent)))
+
+See [Contributors](https://github.com/luckymarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
 
 ## Credits
 
-* [Mustache.js](https://github.com/janl/mustache.js/), also released under the MIT License
-* [URI.js](http://medialize.github.io/URI.js/), also released under the MIT License
+* [babel.js](https://babeljs.io), also released under the MIT License

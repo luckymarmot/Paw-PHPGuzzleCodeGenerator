@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-- '0.10'
+- '5.3'
 before_install:
-- npm install coffee-script
+- make configure
 before_script:
-- ./node_modules/.bin/cake archive
+- make pack
 script:
-- ./node_modules/.bin/cake test
+- make check
 deploy:
   provider: releases
   api_key:
     secure: NoL4SeS6SuyEUvG0L9mvV0BGc7TGs8mMiUXKw0938GkFb79ZNOvl5yAfJK3qE2KyHFHwNtX4EQoNP970/TqktnODbDCGTWl3gUT3rRzjZHK4MyLy0hw/YdQ8WiWc80OEf4fYPCVij4+xajq/xi8Sh5Y8taVUvpqzabPepHLHDUE=
-  file: build/PHPGuzzleCodeGenerator.zip
+  file: releases/PHPGuzzleCodeGenerator.zip
   skip_cleanup: true
   on:
     tags: true
