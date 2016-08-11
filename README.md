@@ -35,7 +35,7 @@ Copyright © 2014 Paw Inc.
 ## Contributors
 
 Created by Quentin Rousseau ([@kwent](https://github.com/kwent)).
-Maintained and updated by Jonathan Montane ([@JonathanMontane](https://github.com/kwent)))
+Maintained and updated by Jonathan Montane ([@JonathanMontane](https://github.com/JonathanMontane)))
 
 See [Contributors](https://github.com/luckymarmot/Paw-PHPGuzzleCodeGenerator/graphs/contributors).
 
