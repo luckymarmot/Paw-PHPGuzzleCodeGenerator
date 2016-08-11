@@ -57,7 +57,7 @@ export default class Template {
             ::this.renderRequestObjects(this.props.requests) + `;
 
 $response = $client->send($request);
-echo "Response HTTP : " . $response->getStatusCode() . "\n";`
+echo "Response HTTP : " . $response->getStatusCode() . "\\n";`
     }
 
     renderMultipleRequests() {
